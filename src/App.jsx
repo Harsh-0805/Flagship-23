@@ -1,21 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Hero,
-  Navbar,
-  StarsCanvas,
-} from "./components";
+import { About, Contact, Hero, Navbar, StarsCanvas } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+      <div className="relative z-0 overflow-x-clip">
+        <div className="bg-cover bg-no-repeat bg-center bg-[#131110] relative">
           <Navbar />
           <Hero />
         </div>
-        <About />
+        {/* <About /> */}
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
