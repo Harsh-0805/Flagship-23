@@ -40,7 +40,7 @@ const Works = () => {
     <>
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
-          <h2 className={styles.sectionHeadText}>Projects</h2>
+          <h2 className={styles.sectionHeadText}>Speakers</h2>
         </div>
       </motion.div>
 

@@ -112,7 +112,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                class="block py-2 pl-3 pr-4 text-whiterounded md:bg-transparent md:p-0"
+                class="block cursor-pointer py-2 pl-3 pr-4 text-whiterounded md:bg-transparent md:p-0"
                 aria-current="page"
               >
                 Home
@@ -121,23 +121,29 @@ const Navbar = () => {
             <li>
               <a
                 href="#about"
-                class="block py-2 pl-3 pr-4  md:hover:bg-transparent md:border-0 md:p-0"
+                class="block cursor-pointer py-2 pl-3 pr-4  md:hover:bg-transparent md:border-0 md:p-0"
               >
                 About
               </a>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 md:p-0">
+              <a href="#" class="block cursor-pointer py-2 pl-3 pr-4 md:p-0">
                 Services
               </a>
             </li>
             <li>
-              <a href="#pricing" class="block py-2 pl-3 pr-4 md:p-0">
+              <a
+                href="#pricing"
+                class="block cursor-pointer py-2 pl-3 pr-4 md:p-0"
+              >
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#contact" class="block py-2 pl-3 pr-4 md:p-0">
+              <a
+                href="#contact"
+                class="block cursor-pointer py-2 pl-3 pr-4 md:p-0"
+              >
                 Contact
               </a>
             </li>
