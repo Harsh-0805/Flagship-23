@@ -8,8 +8,8 @@ const Sponsor = () => {
   return (
     <>
       <motion.div className={textVariant()}>
-        <div className="items-center text-center">
-          <h2 className={styles.sectionHeadText}>Sponsors</h2>
+        <div className="items-center text-center bg-[#131110]">
+          <h2 className={styles.sectionHeadText}></h2>
         </div>
       </motion.div>
       <div className="m-8">

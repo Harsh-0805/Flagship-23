@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Works, Contact, Hero, Navbar, StarsCanvas } from "./components";
+import { Works, Contact, Hero, Navbar } from "./components";
 import Footer from "./components/footer";
 import Sponsor from "./components/sponsors";
 
@@ -14,14 +14,11 @@ const App = () => {
         {/* <About /> */}
         <Sponsor />
       </div>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0">
         <Works />
-        <div className="relative z-0">
-          {/* <Contact />
-          <StarsCanvas /> */}
-          <Footer />
-        </div>
       </div>
+      <Contact />
+      <Footer />
     </BrowserRouter>
   );
 };

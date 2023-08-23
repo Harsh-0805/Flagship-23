@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-6 lg:gap-x-24 xl:gap-x-6 md:grid-cols-2 xl:grid-cols-4 lg:col-span-3">
               <div className="flex flex-col items-center gap-2">
                 <p className="font-bold text-xl uppercase text-start">
-                  Consortium&apos;23
+                  Flagship&apos;23
                 </p>
                 <p className="text-center text-base mt-4 w-1/2 lg:w-full">
                   Consortium, the Annual Entrepreneurship Summit and Management
@@ -62,22 +62,24 @@ const Footer = () => {
                 </p>
                 <nav className="flex flex-col space-y-2 mt-4 text-center text-sm xl:text-base text-white">
                   <a
-                    className="hover:opacity-75"
                     target="_blank"
                     rel="noreferrer"
                     href="mailto:contact@ecellvnit.org"
                   >
                     For Public Affairs & Communications: <br />
-                    <strong>publicrelations@ecellvnit.ac.in</strong>
+                    <strong className="hover:opacity-75">
+                      publicrelations@ecellvnit.ac.in
+                    </strong>
                   </a>
                   <a
-                    className="hover:opacity-75"
                     target="_blank"
                     rel="noreferrer"
                     href="mailto:corporateaffairs@ecellvnit.co.in"
                   >
                     For Association and Sponsorship: <br />
-                    <strong>corporateaffairs@ecellvnit.co.in</strong>
+                    <strong className="hover:opacity-75">
+                      corporateaffairs@ecellvnit.co.in
+                    </strong>
                   </a>
                 </nav>
               </div>
