@@ -49,7 +49,7 @@ const Hero = () => {
     //     </a>
     //   </div>
     // </section>
-    <section className="hero-wrapper bg-[#131110]">
+    <section className="hero-wrapper bg-[#0073cf]">
       <div>
         <ParticlesContainer />
         <div className="paddings innerWidth hero-container flexCenter z-[1]">

@@ -7,7 +7,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 overflow-x-clip">
-        <div className="bg-cover bg-no-repeat bg-center bg-[#131110] relative">
+        <div className="bg-cover bg-no-repeat bg-center relative">
           <Navbar />
         </div>
         <Hero />
