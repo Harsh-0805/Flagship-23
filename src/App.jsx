@@ -6,19 +6,15 @@ import Sponsor from "./components/sponsors";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 overflow-hidden leading-relaxed">
-        <div className="bg-cover bg-no-repeat bg-center relative">
-          <Navbar />
-        </div>
+      <div className="relative z-0 ">
+        <Navbar />
         <Hero />
         {/* <About /> */}
-        <Sponsor />
+        {/* <Sponsor /> */}
       </div>
-      <div className="relative z-0">
-        <Works className="bg-[#d3d3d3]" />
-      </div>
-      <Contact />
-      <Footer />
+      {/* <Works /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
