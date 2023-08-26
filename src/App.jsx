@@ -6,7 +6,7 @@ import Sponsor from "./components/sponsors";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 overflow-x-clip">
+      <div className="relative z-0 overflow-hidden leading-relaxed">
         <div className="bg-cover bg-no-repeat bg-center relative">
           <Navbar />
         </div>
@@ -15,7 +15,7 @@ const App = () => {
         <Sponsor />
       </div>
       <div className="relative z-0">
-        <Works />
+        <Works className="bg-[#d3d3d3]" />
       </div>
       <Contact />
       <Footer />

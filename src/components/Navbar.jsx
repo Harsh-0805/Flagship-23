@@ -74,7 +74,7 @@ const Navbar = () => {
     //     </div>
     //   </div>
 
-    <nav class="bg-[#131110]">
+    <nav class="">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://www.ecellvnit.org"

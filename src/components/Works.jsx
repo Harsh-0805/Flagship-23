@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, image }) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-[#0080ff]/30 p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -40,7 +40,9 @@ const Works = () => {
     <>
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
-          <h2 className={styles.sectionHeadText}>Speakers</h2>
+          <h2 className={styles.sectionHeadText}>
+            SP<span className="text-blue-800">E</span>AKERS
+          </h2>
         </div>
       </motion.div>
 
