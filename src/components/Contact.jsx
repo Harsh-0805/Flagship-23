@@ -2,14 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInIn } from "../utils/motion";
 import { BsArrowRight } from "react-icons/bs";
+import { fadeIn,textVariant } from "../utils/motion";
 
 const Contact = () => {
   return (
     <div className="h-full bg-[#131424]/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="container mx-auto py-32 px-5 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px] ">
           <motion.h2
-            variants={fadeInIn("up", 0.2)}
+            variants={fadeIn("up", "spring", 0.5, 0.75)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -18,11 +19,11 @@ const Contact = () => {
             Let's <span className="text-[blue]">Connect.</span>
           </motion.h2>
           <motion.form
-            variants={fadeInIn("up", 0.4)}
+            variants={fadeIn("up", "spring", 0.5, 0.75)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            className={`${textVariant()} flex-1 flex flex-col gap-6 w-full mx-auto`}
           >
             <div className="flex gap-x-6 w-full">
               <input type="text" placeholder="name" className="input" />

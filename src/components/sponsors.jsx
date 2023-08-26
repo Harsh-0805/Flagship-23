@@ -8,7 +8,7 @@ const Sponsor = () => {
   return (
     <>
       <motion.div className={textVariant()}>
-        <div className="items-center text-center bg-[#131110]">
+        <div className="items-center text-center bg-white">
           <h2 className={styles.sectionHeadText}></h2>
         </div>
       </motion.div>
@@ -18,14 +18,14 @@ const Sponsor = () => {
           duration={40}
           pauseOnHover={true}
           blurBorders={false}
-          blurBoderColor={"#fff"}
+          blurBoderColor={"#000"}
         >
           <Slider.Slide>
             <svg
               width="94"
               height="50"
               viewBox="0 0 94 50"
-              fill="none"
+              fill="white"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
