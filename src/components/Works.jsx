@@ -41,7 +41,7 @@ const Works = () => {
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
           <h2 className={styles.sectionHeadText}>
-            SP<span className="text-blue-800">E</span>AKERS
+            SP<span className="text-[blue]">E</span>AKERS
           </h2>
         </div>
       </motion.div>

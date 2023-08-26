@@ -16,7 +16,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-21"
           >
-            Let's <span className="text-blue-800">Connect.</span>
+            Let's <span className="text-[blue]">Connect.</span>
           </motion.h2>
           <motion.form
             variants={fadeIn("up", "spring", 0.4, 1.5)}

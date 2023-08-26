@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="flexColStart gap-[3rem]">
           <div className="relative z-[1]">
             <h1 className="font-semibold text-[5rem] leading-[4rem]">
-              Flagship'<span className="text-[#97d2ec]">23</span>
+              Flagship'<span className="text-[blue]">23</span>
             </h1>
           </div>
           <div className="flexColStart hero-des">
