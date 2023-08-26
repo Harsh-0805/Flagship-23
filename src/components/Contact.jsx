@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInIn } from "../utils/motion";
 import { BsArrowRight } from "react-icons/bs";
-// import { fadeIn } from "../utils/motion";
 
 const Contact = () => {
   return (
@@ -10,7 +9,7 @@ const Contact = () => {
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px] ">
           <motion.h2
-            variants={fadeInIn("up", "spring", 0.2, 1.5)}
+            variants={fadeInIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -19,7 +18,7 @@ const Contact = () => {
             Let's <span className="text-[blue]">Connect.</span>
           </motion.h2>
           <motion.form
-            variants={fadeInIn("up", "spring", 0.4, 1.5)}
+            variants={fadeInIn("up", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"

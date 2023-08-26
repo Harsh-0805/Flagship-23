@@ -10,11 +10,11 @@ const App = () => {
         <Navbar />
         <Hero />
         {/* <About /> */}
-        {/* <Sponsor /> */}
+        <Sponsor />
       </div>
-      {/* <Works /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Works />
+      <Contact />
+      <Footer />
     </BrowserRouter>
   );
 };
