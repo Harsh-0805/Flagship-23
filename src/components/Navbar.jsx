@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-// import { logo, menu, close } from "../assets";
+import React from "react";
 import logo from "../assets/ecell-white-img.png";
 
 import { Fragment } from "react";
@@ -14,15 +10,11 @@ const navigation = [
   { name: "About", href: "/#about" },
   // { name: "Initiatives", href: "/#initiatives" },
   // { name: "Events", href: "/#events" },
+  { name: "Sponsors", href: "/#sponsors" },
   { name: "Speakers", href: "/#speaker" },
-  { name: "Sponsors", href: "/sponsors" },
   { name: "Register", href: "/#contact" },
 ];
 const Navbar = () => {
-
-  
-  // const [active, setActive] = useState("");
-  // const [toggle, setToggle] = useState(false);
   return (
     <Popover className="relative w-full bg-black z-50">
       <div className="px-5 flex items-center justify-between py-2 md:justify-start md:space-x-10">
@@ -51,7 +43,7 @@ const Navbar = () => {
           {navigation.map((item, idx) => (
             <a
               key={idx}
-              className="text-xs lg:text-lg uppercase text-white hover:text-gray-300"
+              className="text-xs lg:text-lg uppercase text-white hover:text-[blue]"
               href={item.href}
             >
               {item.name}
@@ -69,8 +61,7 @@ const Navbar = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
-        >
+        <Popover.Panel className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
@@ -85,13 +76,8 @@ const Navbar = () => {
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">
-                      Close menu
-                    </span>
-                    <XMarkIcon
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                    />
+                    <span className="sr-only">Close menu</span>
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -101,7 +87,7 @@ const Navbar = () => {
                     <Popover.Button
                       as="a"
                       key={idx}
-                      className="text-md uppercase text-gray-900 hover:text-gray-700"
+                      className="text-md uppercase text-gray-900 hover:text-[blue]"
                       href={item.href}
                     >
                       {item.name}

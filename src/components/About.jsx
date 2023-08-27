@@ -1,12 +1,17 @@
 import React from "react";
+import { slideIn } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <>
-      <section className="pt-20 px-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden ">
+      <section
+        id="about"
+        className="pt-20 px-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden "
+      >
         <div className="container">
           <div className="flex flex-wrap items-center justify-between -mx-4">
-            <div className="w-full px-4 lg:w-6/12">
+            <motion.div className="w-full px-4 lg:w-6/12">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full h-[75%] px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
@@ -604,27 +609,29 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            </motion.div>
+            <motion.div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
                 <span className="block mb-2 text-[30px] font-semibold text-white">
                   About Flagship
                 </span>
                 <p className="mb-8 text-base text-body-color">
-                It is a long established fact that a reader will be distracted
+                  It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+                  The point of using Lorem Ipsum is that it has a
+                  more-or-less.It is a long established fact that a reader will
+                  be distracted by the readable content of a page when looking
+                  at its layout. The point of using Lorem Ipsum is that it has a
+                  more-or-less.
                 </p>
                 <a
-                  href="/#"
+                  href="/#contact"
                   className="inline-flex items-center justify-center px-10 py-4 text-base font-normal text-center text-white rounded-lg bg-[blue] hover:bg-opacity-90 lg:px-8 xl:px-10"
                 >
                   Register Now
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

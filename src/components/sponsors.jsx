@@ -6,15 +6,10 @@ import { textVariant } from "../utils/motion";
 
 const Sponsor = () => {
   return (
-    <>
-      <motion.div className={textVariant()}>
-        <div className="items-center text-center bg-white">
-          <h2 className={styles.sectionHeadText}></h2>
-        </div>
-      </motion.div>
+    <section id="sponsors">
       <div className="m-8">
         <Slider
-          width="250px"
+          width="300px"
           duration={40}
           pauseOnHover={true}
           blurBorders={false}
@@ -120,7 +115,7 @@ const Sponsor = () => {
           </Slider.Slide>
         </Slider>
       </div>
-    </>
+    </section>
   );
 };
 

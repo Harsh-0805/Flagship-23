@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInIn } from "../utils/motion";
 import { BsArrowRight } from "react-icons/bs";
-import { fadeIn,textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Contact = () => {
   return (
-    <div className="h-full bg-[#131424]/30">
+    <div id="contact" className="h-full bg-[#131424]/30">
       <div className="container mx-auto py-32 px-5 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px] ">
           <motion.h2
@@ -16,7 +16,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-21"
           >
-            Let's <span className="text-[blue]">Connect.</span>
+            Register <span className="text-[blue]">Here</span>
           </motion.h2>
           <motion.form
             variants={fadeIn("up", "spring", 0.5, 0.75)}
