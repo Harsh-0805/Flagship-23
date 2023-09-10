@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Works, Contact, Hero, Navbar,About } from "./components";
+import { Works, Contact, Hero, Navbar, About } from "./components";
 import Footer from "./components/footer";
 import Sponsor from "./components/sponsors";
 import Glimpses from "./components/Glimpses";

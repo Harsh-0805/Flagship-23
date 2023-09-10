@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, image }) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-[#0080ff]/30 p-5 rounded-2xl sm:w-[360px] w-full"
+        className="p-5 rounded-2xl sm:w-[360px] w-full bg-gradient-to-b from-[blue] to-[#009ef6] "
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -28,7 +28,7 @@ const ProjectCard = ({ index, name, description, image }) => {
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-white text-[14px]">{description}</p>
         </div>
       </Tilt>
     </motion.div>

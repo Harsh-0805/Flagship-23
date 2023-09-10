@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <section className="pt-20 px-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden ">
+      <section className="pt-20 px-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden">
         <div className="container">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -607,15 +607,17 @@ const About = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
-                <span className="block mb-2 text-[30px] font-semibold text-white">
+                <span className="block mb-2 text-[40px] font-semibold text-white">
                   About Flagship
                 </span>
                 <p className="mb-8 text-base text-body-color">
-                It is a long established fact that a reader will be distracted
+                  It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+                  The point of using Lorem Ipsum is that it has a
+                  more-or-less.It is a long established fact that a reader will
+                  be distracted by the readable content of a page when looking
+                  at its layout. The point of using Lorem Ipsum is that it has a
+                  more-or-less.
                 </p>
                 <a
                   href="/#"

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
+import { textVariant } from "../utils/motion";
+import { styles } from "../styles";
 
 const Glimpses = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,23 +44,23 @@ const Glimpses = () => {
   const slidersVariants = {
     hover: {
       scale: 1.2,
-      backgroundColor: "#ff00008e",
+      backgroundColor: "000000",
     },
   };
-  const dotsVariants = {
-    initial: {
-      y: 0,
-    },
-    animate: {
-      y: -10,
-      scale: 1.2,
-      transition: { type: "spring", stiffness: 1000, damping: "10" },
-    },
-    hover: {
-      scale: 1.1,
-      transition: { duration: 0.2 },
-    },
-  };
+  // const dotsVariants = {
+  //   initial: {
+  //     y: 0,
+  //   },
+  //   animate: {
+  //     y: -10,
+  //     scale: 1.2,
+  //     transition: { type: "spring", stiffness: 1000, damping: "10" },
+  //   },
+  //   hover: {
+  //     scale: 1.1,
+  //     transition: { duration: 0.2 },
+  //   },
+  // };
 
   const handleNext = () => {
     setDirection("right");
@@ -75,13 +77,18 @@ const Glimpses = () => {
     );
   };
 
-  const handleDotClick = (index) => {
-    setDirection(index > currentIndex ? "right" : "left");
-    setCurrentIndex(index);
-  };
+  // const handleDotClick = (index) => {
+  //   setDirection(index > currentIndex ? "right" : "left");
+  //   setCurrentIndex(index);
+  // };
 
   return (
-    <div className="carousel">
+    <div className="carousel my-8 ">
+      <motion.div className={textVariant()}>
+        <div className="items-center text-center">
+          <h2 className={styles.sectionHeadText}>GLIMPSES</h2>
+        </div>
+      </motion.div>
       <div className="carousel-images">
         <AnimatePresence>
           <motion.img
@@ -126,7 +133,7 @@ const Glimpses = () => {
           </motion.div>
         </div>
       </div>
-      <div className="carousel-indicator">
+      {/* <div className="carousel-indicator">
         {images.map((_, index) => (
           <motion.div
             key={index}
@@ -135,10 +142,10 @@ const Glimpses = () => {
             initial="initial"
             animate={currentIndex === index ? "animate" : ""}
             whileHover="hover"
-            variants={dotsVariants}
+            // variants={dotsVariants}
           ></motion.div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
