@@ -379,28 +379,6 @@ a {
   font-size: 3.8rem;
   line-height: 4rem;
 }
-.orange-circle {
-  height: 4rem;
-  width: 4rem;
-  background: var(--orange-gradient);
-  border-radius: 999px;
-  position: absolute;
-  right: 28%;
-  top: -10%;
-  z-index: -1;
-}
-.search-bar {
-  background-color: white;
-  border-radius: 5px;
-  border: 3px solid rgba(120, 120, 120, 0.374);
-  padding: 0.5rem 1rem;
-  width: 100%;
-  justify-content: space-between;
-}
-.search-bar > input {
-  border: none;
-  outline: none;
-}
 .stats{
     width: 100%;
     justify-content: space-between;
@@ -450,3 +428,57 @@ a {
     font-size: 0.8rem;
   }
 }
+
+.carousel-images {
+  position: relative;
+  border-radius: 10px;
+  height: 500px;
+  max-width: 750px;
+  margin: auto;
+  overflow: hidden;
+}
+.carousel-images img {
+  width: 99%;
+  height: 99%;
+  border-radius: 8px;
+  /* border: #ff00008e solid 2px; */
+}
+.slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  background-color: #0000ff;
+  color: #fff;
+  padding: 3px 5px;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 25px;
+  width: 25px;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+/* .carousel-indicator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+} */
+/* .dot {
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.active {
+  background-color: #fa2020;
+} */
