@@ -47,20 +47,6 @@ const Glimpses = () => {
       backgroundColor: "000000",
     },
   };
-  // const dotsVariants = {
-  //   initial: {
-  //     y: 0,
-  //   },
-  //   animate: {
-  //     y: -10,
-  //     scale: 1.2,
-  //     transition: { type: "spring", stiffness: 1000, damping: "10" },
-  //   },
-  //   hover: {
-  //     scale: 1.1,
-  //     transition: { duration: 0.2 },
-  //   },
-  // };
 
   const handleNext = () => {
     setDirection("right");
@@ -76,11 +62,6 @@ const Glimpses = () => {
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
-  // const handleDotClick = (index) => {
-  //   setDirection(index > currentIndex ? "right" : "left");
-  //   setCurrentIndex(index);
-  // };
 
   return (
     <div className="carousel my-8 ">
@@ -98,6 +79,7 @@ const Glimpses = () => {
             animate="visible"
             exit="exit"
             variants={slideVariants}
+            transition={{ duration: 1 }}
           />
         </AnimatePresence>
         <div className="slide_direction">
@@ -133,19 +115,6 @@ const Glimpses = () => {
           </motion.div>
         </div>
       </div>
-      {/* <div className="carousel-indicator">
-        {images.map((_, index) => (
-          <motion.div
-            key={index}
-            className={`dot ${currentIndex === index ? "active" : ""}`}
-            onClick={() => handleDotClick(index)}
-            initial="initial"
-            animate={currentIndex === index ? "animate" : ""}
-            whileHover="hover"
-            // variants={dotsVariants}
-          ></motion.div>
-        ))}
-      </div> */}
     </div>
   );
 };

@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import { styles } from "../styles";
-import { fadeIn } from "../utils/motion";
-import { ComputersCanvas } from "./canvas";
 import "../index.css";
-import hero from "../assets/herobg.png";
 import ParticlesContainer from "./canvas/particleContainer";
+import flagship from "../assets/Flagship.png";
 
 const Hero = () => {
   return (
@@ -24,14 +21,17 @@ const Hero = () => {
               className="text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-4 font-semibold"
             >
               E-CELL <br /> VNIT <br />
-              Flagship'<span className="text-[blue]">23</span>
+              Flagship'
+              <span className="bg-gradient-to-b from-[#0000ff] to-[#000000] bg-clip-text text-transparent text-[70px]">
+                23
+              </span>
             </motion.h1>
           </div>
           <div className="flexColStart secondaryText flexhero-des">
-            <span>Find a variety of properties that suit you very easilty</span>
-            <span>Forget all difficulties in finding a residence for you</span>
-            <span>Forget all difficulties in finding a residence for you</span>
-            <span>Forget all difficulties in finding a residence for you</span>
+            <span>
+              This year Flagship'23 is happening on the 17th of September
+            </span>
+            <span>Venue: VNIT Auditorium from 6 pm</span>
           </div>
 
           <div className="flexCenter stats">
@@ -69,9 +69,20 @@ const Hero = () => {
               duration: 2,
               type: "ease-in",
             }}
+            // animate={{
+            //   // y: [0, -20, 0, 20, 0], // Define the y-coordinate animation values
+            //   x: 0,
+            //   opacity: 1,
+            // }}
+            // transition={{
+            //   type: "ease-in",
+            //   duration: 2, // Duration of one full wave cycle
+            //   // repeat: Infinity, // Repeat the animation infinitely
+            //   // ease: "linear", // Linear easing for a smooth wave motion
+            // }}
             className="image-container z-[1]"
           >
-            <img src={hero} alt="houses" />
+            <img src={flagship} alt="houses" />
           </motion.div>
         </div>
         <ParticlesContainer />

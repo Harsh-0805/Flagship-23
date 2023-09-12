@@ -1,7 +1,8 @@
 import React from "react";
-import flag1 from "../assets/flagship11.jpg";
-import flag2 from "../assets/flagship21.jpg";
-import flag3 from "../assets/flagship31.jpg";
+import flag1 from "../assets/flagship1.jpg";
+import flag2 from "../assets/flagship2.jpg";
+import flag3 from "../assets/flagship3.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -605,13 +606,16 @@ const About = () => {
                   About Flagship
                 </span>
                 <p className="mb-8 text-base text-body-color">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a
-                  more-or-less.It is a long established fact that a reader will
-                  be distracted by the readable content of a page when looking
-                  at its layout. The point of using Lorem Ipsum is that it has a
-                  more-or-less.
+                  Flagship'23 is the inaugural event of entrepreneurship Cell of
+                  VNIT that aims to foster innovation, entrepreneurship, and
+                  leadership among young minds. This event marks the conclave of
+                  pioneering personalities that have proven themselves in
+                  different walks of life .Elite speakers who have demonstrated
+                  their expertise on the international stage and can inspire the
+                  crowd with their interactions are invited every year . Last
+                  year Flagship'22 was graced by some of the esteemed
+                  personalities like Aman Dhattarwal , Anil Swarup and Shefali
+                  Vijaywargiya
                 </p>
                 <a
                   href="/#contact"

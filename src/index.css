@@ -275,11 +275,6 @@ a {
   color: rgb(140 139 139);
   font-size: 0.9rem;
 }
-.orangeText {
-  color: orange;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
 
 /* media queries */
 @media (min-width: 1536px) {
@@ -325,8 +320,6 @@ a {
   width: 30rem;
   height: 35rem;
   overflow: hidden;
-  border-radius: 15rem 15rem 0 0;
-  border: 8px solid rgba(255, 255, 255, 0.12);
 }
 
 .image-container>img{
@@ -394,8 +387,6 @@ a {
   width: 30rem;
   height: 35rem;
   overflow: hidden;
-  border-radius: 15rem 15rem 0 0;
-  border: 8px solid rgba(255, 255, 255, 0.12);
 }
 .image-container>img{
     width: 100%;
