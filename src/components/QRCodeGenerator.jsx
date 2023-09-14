@@ -38,7 +38,7 @@ function QRCodeGenerator() {
       .catch((error) => {
         console.error("Error updating n:", error);
       });
-    const url = `https://client-1gwhbnikf-soulfaced.vercel.app/${number}`;
+    const url = `https://flagship.ecellvnit.org/registration/fg-reg-1x33d/${number}`;
     setQRCodeData(url);
   };
 

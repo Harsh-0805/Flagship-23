@@ -5,6 +5,9 @@ import Sponsor from "./components/sponsors";
 import Glimpses from "./components/Glimpses";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import Page from "./components/Page";
+import RegistrationForm from "./components/RegistrationForm";
+import CompletedRegistration from "./components/completedRegistration";
+import ErrorPage from "./components/error";
 
 const App = () => {
   return (
@@ -24,6 +27,9 @@ const App = () => {
           <Footer />
         </Route> */}
         <Route path="/qr-code" element={<QRCodeGenerator />} />
+        <Route path="/registration/fg-reg-1x33d/:n" element={<RegistrationForm/>}/>
+        <Route path="/success" element={<CompletedRegistration />} />
+        <Route path="/error" element={<ErrorPage />} /> 
       </Routes>
     </BrowserRouter>
   );
