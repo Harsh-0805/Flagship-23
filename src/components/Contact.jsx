@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-full bg-[#131424]/30">
+    <div id="contact" className="h-full">
       <div className="container mx-auto py-32 px-5 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px] ">
           <motion.h2
@@ -16,7 +16,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-21"
           >
-            Register <span className="text-[blue]">Here</span>
+            Contact <span className="text-[blue]">Us</span>
           </motion.h2>
           <motion.form
             variants={fadeIn("up", "spring", 0.5, 0.75)}
@@ -37,7 +37,7 @@ const Contact = () => {
             overflow-hidden hover:border-accent-group hover:shadow-[inset_0_0_0.5rem_4em_blue] hover:translate-y-[-0.5rem] hover:text-[color:var(--hover-b)]"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 ">
-                Let's talk
+                Submit
               </span>
             </button>
           </motion.form>

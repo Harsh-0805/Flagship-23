@@ -6,7 +6,7 @@ import { textVariant } from "../utils/motion";
 
 const Sponsor = () => {
   return (
-    <>
+    <section id="sponsors">
       <motion.div className={textVariant()}>
         <div className="items-center text-center bg-white">
           <h2 className={styles.sectionHeadText}></h2>
@@ -120,7 +120,7 @@ const Sponsor = () => {
           </Slider.Slide>
         </Slider>
       </div>
-    </>
+    </section>
   );
 };
 

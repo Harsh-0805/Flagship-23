@@ -9,7 +9,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="pt-20 px-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden "
+        className="pt-12 px-12 sm:pt-10 sm:px-10 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden bg-[#131424]/30"
       >
         <div className="container">
           <div className="flex flex-wrap items-center justify-between -mx-4">

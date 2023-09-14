@@ -3,18 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
+import glimp1 from "../assets/IMG-20230913-WA0001.jpg";
+import glimp2 from "../assets/IMG-20230913-WA0002.jpg";
+import glimp3 from "../assets/IMG-20230913-WA0003.jpg";
+import glimp4 from "../assets/IMG-20230913-WA0004.jpg";
+import glimp5 from "../assets/IMG-20230913-WA0005.jpg";
+import glimp6 from "../assets/IMG-20230913-WA0006.jpg";
+import glimp7 from "../assets/IMG-20230913-WA0007.jpg";
+import glimp8 from "../assets/IMG-20230913-WA0008.jpg";
 
 const Glimpses = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 
   const images = [
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    glimp1,
+    glimp2,
+    glimp3,
+    glimp4,
+    glimp5,
+    glimp6,
+    glimp7,
+    glimp8,
   ];
 
   const slideVariants = {
@@ -64,13 +74,13 @@ const Glimpses = () => {
   };
 
   return (
-    <div className="carousel my-8 ">
+    <div id="glimpses" className="carousel my-8 pb-8 bg-[#131424]/30 p-2">
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
           <h2 className={styles.sectionHeadText}>GLIMPSES</h2>
         </div>
       </motion.div>
-      <div className="carousel-images">
+      <div className="carousel-images py-4">
         <AnimatePresence>
           <motion.img
             key={currentIndex}
@@ -80,6 +90,7 @@ const Glimpses = () => {
             exit="exit"
             variants={slideVariants}
             transition={{ duration: 1 }}
+            className="object-contain"
           />
         </AnimatePresence>
         <div className="slide_direction">
