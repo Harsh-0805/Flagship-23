@@ -10,7 +10,7 @@ const Page = () => {
         <Navbar />
         <Hero />
         <About />
-        <Sponsor />
+        {/* <Sponsor /> */}
       </div>
       <Works />
       <Glimpses />

@@ -1,8 +1,8 @@
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import speaker1 from "./soon.gif";
+import speaker2 from "./soon.gif";
+import speaker3 from "./soon.gif";
 
-export { menu, close, carrent, jobit, tripguide };
+export { menu, close, speaker1, speaker2, speaker3 };

@@ -1,4 +1,4 @@
-import { carrent, jobit, tripguide } from "../assets";
+import { speaker1, speaker2, speaker3 } from "../assets";
 
 export const navLinks = [
   {
@@ -17,22 +17,19 @@ export const navLinks = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    image: carrent,
+    name: "Speaker #1",
+    description: "",
+    image: speaker1,
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    image: jobit,
+    name: "Speaker #2",
+    description: "",
+    image: speaker2,
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    image: tripguide,
+    name: "Speaker #3",
+    description: "",
+    image: speaker3,
   },
 ];
 

@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInIn } from "../utils/motion";
-import { BsArrowRight } from "react-icons/bs";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const Contact = () => {
@@ -27,9 +25,9 @@ const Contact = () => {
           >
             <div className="flex gap-x-6 w-full">
               <input type="text" placeholder="name" className="input" />
-              <input type="email" placeholder="email" className="input" />
+              <input type="number" placeholder="number" className="input" />
             </div>
-            <input type="text" placeholder="subject" className="input" />
+            <input type="email" placeholder="email" className="input" />
             <textarea placeholder="message" className="textarea"></textarea>
             <button
               className="btn rounded-full border border-white/50 max-w-[170px]

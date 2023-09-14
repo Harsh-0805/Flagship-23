@@ -618,10 +618,10 @@ const About = () => {
                   Vijaywargiya
                 </p>
                 <a
-                  href="/#contact"
+                  href="/#speaker"
                   className="inline-flex items-center justify-center px-10 py-4 text-base font-normal text-center text-white rounded-lg bg-[blue] hover:bg-opacity-90 lg:px-8 xl:px-10"
                 >
-                  Register Now
+                  Know More
                 </a>
               </div>
             </motion.div>

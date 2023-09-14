@@ -39,9 +39,7 @@ const Works = () => {
     <section id="speaker">
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
-          <h2 className={styles.sectionHeadText}>
-            SP<span className="text-[blue]">E</span>AKERS
-          </h2>
+          <h2 className={styles.sectionHeadText}>SPEAKERS</h2>
         </div>
       </motion.div>
 
