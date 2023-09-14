@@ -3,7 +3,7 @@ import React from "react";
 
 function CompletedRegistration() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-blue-800 h-[100vh]">
+    <div className="bg-gradient-to-r from-slate-900 to-blue-800 ">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
         <div className="relative isolate overflow-hidden px-6 pt-16  sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           
@@ -12,12 +12,12 @@ function CompletedRegistration() {
               Registration successful.
               <br />
               <br/>
-              Click below to know more about flagship 2023
+              Click below to know more about E-Cell Vnit
             </h2>
             
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               
-              <a href="https://flagship.ecellvnit.org/" className="text-sm font-semibold leading-6 text-white">
+              <a href="https://www.ecellvnit.org/" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
