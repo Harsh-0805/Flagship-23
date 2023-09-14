@@ -605,7 +605,7 @@ const About = () => {
                 <span className="block mb-2 text-[40px] font-semibold text-white">
                   About Flagship
                 </span>
-                <p className="mb-8 text-base text-body-color">
+                <p className="mb-8 text-justify text-base text-body-color">
                   Flagship'23 is the inaugural event of entrepreneurship Cell of
                   VNIT that aims to foster innovation, entrepreneurship, and
                   leadership among young minds. This event marks the conclave of
