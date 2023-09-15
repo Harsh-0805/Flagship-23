@@ -274,6 +274,8 @@ a {
 .secondaryText {
   color: rgb(140 139 139);
   font-size: 0.9rem;
+  /* justify-content: center;
+  text-align: center; */
 }
 
 /* media queries */
