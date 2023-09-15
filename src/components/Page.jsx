@@ -2,6 +2,7 @@ import { Works, Contact, Hero, Navbar, About } from "./";
 import Footer from "./footer";
 import Sponsor from "./sponsors";
 import Glimpses from "./Glimpses";
+import { Analytics } from "@vercel/analytics/react";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <Glimpses />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   );
 };
