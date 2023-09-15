@@ -144,6 +144,7 @@ const Contact = () => {
           onChange={handleChange}
         >
           <option value="Select from below">College Name</option>
+          <option value="Visvesvaraya National Institute of Technology(VNIT),Nagpur">Visvesvaraya National Institute of Technology(VNIT),Nagpur</option>
           <option value="IIM Nagpur">IIM Nagpur</option>
           <option value="AIIMS Nagpur">AIIMS Nagpur</option>
           <option value="Yeshwantrao Chavan College of Engg (YCCE), Nagpur">Yeshwantrao Chavan College of Engg (YCCE), Nagpur</option>
@@ -155,6 +156,7 @@ const Contact = () => {
           <option value="Ramdeobaba">Ramdeobaba</option>
           <option value="Government Medical College Nagpur">Government Medical College Nagpur</option>
           <option value="Priyadarshini College of Engineering">Priyadarshini College of Engineering</option>
+          
           <option value="others">Other</option>
         </select>
       </div>
