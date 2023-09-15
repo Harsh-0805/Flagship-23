@@ -144,7 +144,9 @@ const Contact = () => {
                   onChange={handleChange}
                 >
                   <option value="Select from below">College Name</option>
-                  <option value="Visvesvaraya National Institute of Technology(VNIT),Nagpur">Visvesvaraya National Institute of Technology(VNIT),Nagpur</option>
+                  <option value="Visvesvaraya National Institute of Technology(VNIT),Nagpur">
+                    Visvesvaraya National Institute of Technology(VNIT),Nagpur
+                  </option>
                   <option value="IIM Nagpur">IIM Nagpur</option>
                   <option value="AIIMS Nagpur">AIIMS Nagpur</option>
                   <option value="Yeshwantrao Chavan College of Engg (YCCE), Nagpur">

@@ -31,7 +31,7 @@ const Hero = () => {
             <span>
               This year Flagship'23 is happening on the 17th of September
             </span>
-            <span>Venue: VNIT Auditorium from 6 pm</span>
+            <span>Venue: VNIT Auditorium from 5 pm</span>
           </div>
 
           <div className="flexCenter stats">
@@ -53,7 +53,7 @@ const Hero = () => {
 
             <div className="flexColCenter stat">
               <span>
-                <CountUp end={50} /> <span className="text-[blue]">+</span>
+                <CountUp end={3} /> <span className="text-[blue]">+</span>
               </span>
               <span className="secondaryText">Speakers</span>
             </div>
