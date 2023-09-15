@@ -53,7 +53,7 @@ const Hero = () => {
 
             <div className="flexColCenter stat">
               <span>
-                <CountUp end={50} /> <span className="text-[blue]">+</span>
+                <CountUp end={3} /> <span className="text-[blue]">+</span>
               </span>
               <span className="secondaryText">Speakers</span>
             </div>
