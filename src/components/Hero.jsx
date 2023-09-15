@@ -31,7 +31,7 @@ const Hero = () => {
             <span>
               This year Flagship'23 is happening on the 17th of September
             </span>
-            <span>Venue: VNIT Auditorium from 6 pm</span>
+            <span>Venue: VNIT Auditorium from 5 pm</span>
           </div>
 
           <div className="flexCenter stats">
