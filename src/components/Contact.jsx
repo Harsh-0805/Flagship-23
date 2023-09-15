@@ -172,7 +172,7 @@ const Contact = () => {
                   <option value="Priyadarshini College of Engineering">
                     Priyadarshini College of Engineering
                   </option>
-                  <option value="others">Other</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <button
