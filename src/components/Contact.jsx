@@ -128,7 +128,7 @@ const Contact = () => {
                 id="Aemail"
                 name="Aemail"
                 autoComplete="Aemail"
-                required
+                // required
                 value={formData.Aemail}
                 onChange={handleChange}
               />
