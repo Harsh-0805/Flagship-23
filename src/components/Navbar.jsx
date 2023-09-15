@@ -11,7 +11,7 @@ const navigation = [
   { name: "Sponsors", href: "/#sponsors" },
   { name: "Speakers", href: "/#speaker" },
   { name: "Glimpses", href: "/#glimpses" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Register", href: "/#contact" },
 ];
 const Navbar = () => {
   return (

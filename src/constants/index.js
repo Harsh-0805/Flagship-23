@@ -1,4 +1,4 @@
-import { speaker1, speaker2, speaker3 } from "../assets";
+import { speaker1, speaker2, speaker3, speaker4 } from "../assets";
 
 export const navLinks = [
   {
@@ -17,19 +17,21 @@ export const navLinks = [
 
 const projects = [
   {
-    name: "Speaker #1",
-    description: "",
+    name: "Ishan Sharma",
+    description:
+      "He is a young entrepreneur. Founder of Sentora and Markitup. He is also an YouTuber with over 1.2M+ reach and talks about software development, college and entrepreneurship.",
     image: speaker1,
   },
   {
-    name: "Speaker #2",
-    description: "",
-    image: speaker2,
+    name: "Neha Agarwal",
+    description:
+      "Founder of Mathematically inclined. She is Motivational speaker, educator, mentor. She is also an YouTuber with 1.5M + reach and most beloved mathematics teacher.",
+    image: speaker3,
   },
   {
     name: "Speaker #3",
     description: "",
-    image: speaker3,
+    image: speaker2,
   },
 ];
 

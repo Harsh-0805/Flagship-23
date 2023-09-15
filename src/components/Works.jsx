@@ -15,7 +15,7 @@ const ProjectCard = ({ index, name, description, image }) => {
           scale: 1,
           speed: 450,
         }}
-        className="p-5 rounded-2xl sm:w-[360px] w-full bg-gradient-to-b from-[blue] to-[#009ef6] "
+        className="p-5 rounded-2xl sm:w-[360px] h-[450px] w-full bg-gradient-to-b from-[blue] to-[#009ef6] "
       >
         <div className="relative w-full h-[230px]">
           <img
