@@ -1,4 +1,4 @@
-import { speaker1, speaker2, speaker3, speaker4 } from "../assets";
+import { speaker1, speaker2, speaker3 } from "../assets";
 
 export const navLinks = [
   {
@@ -29,8 +29,9 @@ const projects = [
     image: speaker3,
   },
   {
-    name: "Speaker #3",
-    description: "",
+    name: "Sonal Goel",
+    description:
+      "She is an IAS, 2008 batch dedicated to service of nation from past more than a decade. She has also featured in Top 25 Women transforming India by Niti Aayog, United Nations and MyGov.",
     image: speaker2,
   },
 ];
