@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import Popup from "./Popup";
 import CompletedRegistration from "./completedRegistration";
+import QRCode from "qrcode.react";
 
 const Contact = () => {
   // const { n } = useParams();
@@ -23,6 +24,7 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const [registrationComplete, setRegistrationComplete] = useState(false);
+  const [qrCodeData, setQRCodeData] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,6 +43,16 @@ const Contact = () => {
         setRegistrationComplete(true);
         setIsSuccess(true);
         setPopupMessage("Registration completed successfully.");
+        const userDataString = `id:fs-${formData.name}/-19987-12246/registered-19987-12246${formData.phoneNumber}`;
+
+        // Encode the user data as a URL
+        const userDataURL = encodeURIComponent(userDataString);
+
+        // Generate the QR code using Google Chart API
+        const googleChartAPIURL = `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${userDataURL}`;
+        
+        // Set the QR code data URL
+        setQRCodeData(googleChartAPIURL);
       } else {
         console.error("Registration failed");
         navigate("/error");
@@ -63,7 +75,43 @@ const Contact = () => {
   return (
     <div id="contact" className="h-full">
       {registrationComplete ? (
-        <CompletedRegistration />
+        <div>
+      <div className="bg-gradient-to-r from-slate-900 to-blue-800 ">
+      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div className="relative isolate overflow-hidden px-6 pt-16  sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+          
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+          <img
+          className="m-[auto] pb-5"
+          src={qrCodeData} alt="QR Code" />
+          <h3>Keep screenshot of this page for verification</h3>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Registration successful.
+              <br />
+              <br/>
+              Click below to know more about E-Cell Vnit
+            </h2>
+            
+            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              
+              <a href="https://www.ecellvnit.org/" className="text-sm font-semibold leading-6 text-white">
+                Learn more <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          {/* <div className="relative mt-16 h-80 lg:mt-8">
+            <img
+              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              src="https://drive.google.com/file/d/1N85rcpFjV55v--Fwxz03wC6KoFeSxDn7/view?usp=sharing"
+              alt="App screenshot"
+              // width={1824}
+              // height={1080}
+            />
+          </div> */}
+        </div>
+      </div>
+    </div>
+    </div>
       ) : (
         <div className="container mx-auto py-32 px-5 text-center xl:text-left flex items-center justify-center h-full">
           <div className="flex flex-col w-full max-w-[700px] ">
