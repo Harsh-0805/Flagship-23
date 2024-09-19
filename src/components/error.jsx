@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function ErrorPage() {
-  const history = useNavigate();
+  const navigate = useNavigate(); // Rename this from 'history' to 'navigate'
 
   const goBack = () => {
-    history(-1);
+    navigate(-1); // 'navigate' is called to go back one step in history
   };
 
   return (

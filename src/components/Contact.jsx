@@ -8,7 +8,6 @@ import CompletedRegistration from "./completedRegistration";
 import QRCode from "qrcode.react";
 
 const Contact = () => {
-  // const { n } = useParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,15 +21,17 @@ const Contact = () => {
   const [popupMessage, setPopupMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false); // New state for loader
 
-
   const navigate = useNavigate();
-
   const [registrationComplete, setRegistrationComplete] = useState(false);
   const [qrCodeData, setQRCodeData] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    if (name === "email" || name === "Aemail") {
+      setFormData({ ...formData, [name]: value.toLowerCase() });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -42,22 +43,14 @@ const Contact = () => {
         formData
       );
       if (response.status === 200) {
-        console.log("Registration successful");
         setRegistrationComplete(true);
         setIsSuccess(true);
         setPopupMessage("Registration completed successfully.");
         const userDataString = `id:fs-${formData.name}/-19987-12246/registered-19987-12246${formData.phoneNumber}`;
-
-        // Encode the user data as a URL
         const userDataURL = encodeURIComponent(userDataString);
-
-        // Generate the QR code using Google Chart API
         const googleChartAPIURL = `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${userDataURL}`;
-        
-        // Set the QR code data URL
         setQRCodeData(googleChartAPIURL);
       } else {
-        console.error("Registration failed");
         navigate("/error");
         setIsSuccess(false);
         setPopupMessage("Registration failed. Please try again.");
@@ -68,6 +61,7 @@ const Contact = () => {
       setIsSuccess(false);
       setPopupMessage("Registration failed. Please try again.");
     }
+
     setIsPopupOpen(true);
     setIsLoading(false);
   };
@@ -80,42 +74,35 @@ const Contact = () => {
     <div id="contact" className="h-full">
       {registrationComplete ? (
         <div>
-      <div className="bg-gradient-to-r from-slate-900 to-blue-800 ">
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div className="relative isolate overflow-hidden px-6 pt-16  sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-          
-          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-          <img
-          className="m-[auto] pb-5"
-          src={qrCodeData} alt="QR Code" />
-          <h3>Keep screenshot of this page for verification</h3>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Registration successful.
-              <br />
-              <br/>
-              Click below to know more about E-Cell Vnit
-            </h2>
-            
-            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              
-              <a href="https://www.ecellvnit.org/" className="text-sm font-semibold leading-6 text-white">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+          <div className="bg-gradient-to-r from-slate-900 to-blue-800 ">
+            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+              <div className="relative isolate overflow-hidden px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                  <img
+                    className="m-[auto] pb-5"
+                    src={qrCodeData}
+                    alt="QR Code"
+                  />
+                  <h3>Keep screenshot of this page for verification</h3>
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Registration successful.
+                    <br />
+                    <br />
+                    Click below to know more about E-Cell Vnit
+                  </h2>
+                  <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                    <a
+                      href="https://www.ecellvnit.org/"
+                      className="text-sm font-semibold leading-6 text-white"
+                    >
+                      Learn more <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          {/* <div className="relative mt-16 h-80 lg:mt-8">
-            <img
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-              src="https://drive.google.com/file/d/1N85rcpFjV55v--Fwxz03wC6KoFeSxDn7/view?usp=sharing"
-              alt="App screenshot"
-              // width={1824}
-              // height={1080}
-            />
-          </div> */}
         </div>
-      </div>
-    </div>
-    </div>
       ) : (
         <div className="container mx-auto py-32 px-5 text-center xl:text-left flex items-center justify-center h-full">
           <div className="flex flex-col w-full max-w-[700px] ">
@@ -127,7 +114,6 @@ const Contact = () => {
               className="h2 text-center mb-21"
             >
               Register <span className="text-[blue]">Here</span>
-              
             </motion.h2>
             <motion.form
               variants={fadeIn("up", "spring", 0.5, 0.75)}
@@ -158,6 +144,7 @@ const Contact = () => {
                   id="phoneNumber"
                   name="phoneNumber"
                   autoComplete="phoneNumber"
+                  pattern="\d{10}"
                   required
                   value={formData.phoneNumber}
                   onChange={handleChange}
@@ -170,6 +157,9 @@ const Contact = () => {
                 id="email"
                 name="email"
                 autoComplete="email"
+                autoCapitalize="none"
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                style={{ textTransform: "none" }}
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -181,14 +171,13 @@ const Contact = () => {
                 id="Aemail"
                 name="Aemail"
                 autoComplete="Aemail"
-                // required
+                autoCapitalize="none"
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                style={{ textTransform: "none" }}
                 value={formData.Aemail}
                 onChange={handleChange}
               />
               <div className="relative w-full ">
-                {/* <label htmlFor="collegeName" className="block text-sm font-medium leading-6 text-gray-900">
-          College Name
-        </label> */}
                 <select
                   className="w-full p-2.5 text-gray-500 bg-[#121212] border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
                   name="collegeName"
@@ -224,33 +213,29 @@ const Contact = () => {
                   <option value="Government Medical College Nagpur">
                     Government Medical College Nagpur
                   </option>
-                  <option value="Priyadarshini College of Engineering">
-                    Priyadarshini College of Engineering
-                  </option>
-                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <button
                 type="submit"
                 className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent-group hover:shadow-[inset_0_0_0.5rem_4em_blue] hover:translate-y-[-0.5rem] hover:text-[color:var(--hover-b)]"
+                disabled={isLoading} // Disable the button when loading
               >
                 <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                   {isLoading ? "Loading..." : "Register"}
                 </span>
               </button>
             </motion.form>
-            {isPopupOpen && (
-              <Popup
-                message={popupMessage}
-                isSuccess={isSuccess}
-                onClose={closePopup}
-              />
-            )}
           </div>
         </div>
       )}
-      ;
+      {isPopupOpen && (
+        <Popup
+          message={popupMessage}
+          onClose={closePopup}
+          isSuccess={isSuccess}
+        />
+      )}
     </div>
   );
 };
