@@ -36,7 +36,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(true); // Start loading when form submission begins
+
     try {
       const response = await axios.post(
         "https://flagship-registration-bakend.onrender.com/api/register",
@@ -63,7 +64,7 @@ const Contact = () => {
     }
 
     setIsPopupOpen(true);
-    setIsLoading(false);
+    setIsLoading(false); // Stop loading after request completes
   };
 
   const closePopup = () => {
@@ -216,14 +217,13 @@ const Contact = () => {
                 </select>
               </div>
 
+              {/* Conditional rendering for loader */}
               <button
                 type="submit"
-                className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent-group hover:shadow-[inset_0_0_0.5rem_4em_blue] hover:translate-y-[-0.5rem] hover:text-[color:var(--hover-b)]"
-                disabled={isLoading} // Disable the button when loading
+                className="btn btn-lg btn-blue w-full"
+                disabled={isLoading}
               >
-                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                  {isLoading ? "Loading..." : "Register"}
-                </span>
+                {isLoading ? "Submitting..." : "Register"}
               </button>
             </motion.form>
           </div>

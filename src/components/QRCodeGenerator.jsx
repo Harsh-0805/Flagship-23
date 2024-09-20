@@ -30,7 +30,9 @@ function QRCodeGenerator() {
 
     // Update the 'n' value on the backend using a POST request
     axios
-      .post("https://https://flagship-registration-bakend.onrender.com/api/n", { n: updatedN }) // Update the URL for your backend
+      .post("https://flagship-registration-bakend.onrender.com/api/n", {
+        n: updatedN,
+      }) // Update the URL for your backend
       .then(() => {
         // Successfully updated 'n' on the backend
         console.log(qrCodeData);
