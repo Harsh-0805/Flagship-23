@@ -214,6 +214,7 @@ const Contact = () => {
                   <option value="Government Medical College Nagpur">
                     Government Medical College Nagpur
                   </option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
