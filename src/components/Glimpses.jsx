@@ -3,28 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import glimp1 from "../assets/IMG-20230913-WA0001.jpg";
-import glimp2 from "../assets/IMG-20230913-WA0002.jpg";
-import glimp3 from "../assets/IMG-20230913-WA0003.jpg";
-import glimp4 from "../assets/IMG-20230913-WA0004.jpg";
-import glimp5 from "../assets/IMG-20230913-WA0005.jpg";
-import glimp6 from "../assets/IMG-20230913-WA0006.jpg";
-import glimp7 from "../assets/IMG-20230913-WA0007.jpg";
-import glimp8 from "../assets/IMG-20230913-WA0008.jpg";
+import glimp1 from "../assets/Flagship_2.mov"; // MOV file
+import glimp2 from "../assets/IMG-20230913-WA0001.jpg";
+import glimp3 from "../assets/IMG-20230913-WA0002.jpg";
+import glimp4 from "../assets/IMG-20230913-WA0003.jpg";
+import glimp5 from "../assets/IMG-20230913-WA0004.jpg";
+import glimp6 from "../assets/IMG-20230913-WA0005.jpg";
+import glimp7 from "../assets/IMG-20230913-WA0006.jpg";
+import glimp8 from "../assets/IMG-20230913-WA0007.jpg";
 
 const Glimpses = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 
-  const images = [
-    glimp1,
-    glimp2,
-    glimp3,
-    glimp4,
-    glimp5,
-    glimp6,
-    glimp7,
-    glimp8,
+  // Add a flag to indicate whether it's a video or image
+  const media = [
+    { src: glimp1, type: "video" }, // Video entry
   ];
 
   const slideVariants = {
@@ -51,6 +45,7 @@ const Glimpses = () => {
       },
     },
   };
+
   const slidersVariants = {
     hover: {
       scale: 1.2,
@@ -61,15 +56,14 @@ const Glimpses = () => {
   const handleNext = () => {
     setDirection("right");
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+      prevIndex + 1 === media.length ? 0 : prevIndex + 1
     );
   };
 
   const handlePrevious = () => {
     setDirection("left");
-
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+      prevIndex - 1 < 0 ? media.length - 1 : prevIndex - 1
     );
   };
 
@@ -77,21 +71,33 @@ const Glimpses = () => {
     <div id="glimpses" className="carousel my-8 pb-8 bg-[#131424]/30 p-2">
       <motion.div className={textVariant()}>
         <div className="items-center text-center">
-          <h2 className={styles.sectionHeadText}>GLIMPSES FLAGSHIP '22</h2>
+          <h2 className={styles.sectionHeadText}>AFTERMOVIE FLAGSHIP '24</h2>
         </div>
       </motion.div>
       <div className="carousel-images py-4">
         <AnimatePresence>
-          <motion.img
+          <motion.div
             key={currentIndex}
-            src={images[currentIndex]}
             initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
             animate="visible"
             exit="exit"
             variants={slideVariants}
             transition={{ duration: 1 }}
-            className="object-contain"
-          />
+          >
+            {/* Check if the current media is a video or an image */}
+            {media[currentIndex].type === "video" ? (
+              <video controls className="object-contain">
+                <source src={media[currentIndex].src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img
+                src={media[currentIndex].src}
+                alt={`Glimpse ${currentIndex + 1}`}
+                className="object-contain"
+              />
+            )}
+          </motion.div>
         </AnimatePresence>
         <div className="slide_direction">
           <motion.div
@@ -129,4 +135,5 @@ const Glimpses = () => {
     </div>
   );
 };
+
 export default Glimpses;
